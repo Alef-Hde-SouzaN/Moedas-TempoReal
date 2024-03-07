@@ -24,7 +24,7 @@ Este repositório contém uma aplicação web para realizar a conversão de moed
 
 # Caso queira testar o projeto na sua máquina
  1. Clone o projeto para sua máquina.
-   - git clone 
+   - git clone https://github.com/Alef-Hde-SouzaN/Moedas-TempoReal.git
  2. Entre no diretório da aplicação.
    - cd Modedas-TempoReal
 
