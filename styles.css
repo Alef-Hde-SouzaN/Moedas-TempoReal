@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Estilo base para todos os elementos */
+* {
+    margin: 0; /* Removendo margens padrão */
+    padding: 0; /* Removendo preenchimentos padrão */
+    box-sizing: border-box; /* Configurando a modelagem de caixa para incluir padding e border no cálculo da largura e altura */
+    font-family: "Old Standard TT", sans-serif; /* Definindo a fonte principal */
+    text-rendering: optimizeLegibility; /* Otimizando a renderização de texto para legibilidade */
+    font-synthesis: none; /* Desativando a síntese de fonte */
+    -webkit-font-smoothing: antialiased; /* Suavizando as fontes no Chrome e no Safari */
+    -moz-osx-font-smoothing: grayscale; /* Suavizando as fontes no Firefox */
+    -webkit-text-size-adjust: 100%; /* Ajustando o tamanho do texto no iOS */ 
+}
+
+html {
+    font-size: 62.5%; /* Definindo o tamanho da fonte em 10px (62.5% de 16px padrão), para facilitar a conversão de rem */
+} 
+
+body {
+    height: 100vh; /* Altura da tela */ 
+    display: block; /* ajuste  */ 
+    background: linear-gradient(
+        -45deg,
+        rgb(122, 61, 42),
+        rgb(126, 33, 69),
+        rgb(20, 88, 112),
+        rgb(16, 100, 81)
+      );
+      background-size: 400% 400%;
+      opacity: 0.8;
+      animation: gradient 15s ease infinite;
+      /* efeito gradiend */ 
+}
+
+/* animação */
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.container {
+
+
+    width: 50%; /* Definindo a largura do contêiner */
+    padding: 2rem; /* Adicionando preenchimento interno */
+    margin: 2rem auto; /* Adicionando margem externa */
+    min-width: 470px; /* Definindo a largura mínima */
+    text-align: justify; /* Justificando o texto */
+    max-width: 600px;
+
+    font-weight: bold; /* Definindo o peso da fonte */
+
+        background: rgba(255, 255, 255, 0.2); /* Definindo a cor de fundo com transparência */
+        border-radius: 16px; /* Arredondando as bordas */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra */
+        backdrop-filter: blur(5px); /* Aplicando um filtro de desfoque */
+        -webkit-backdrop-filter: blur(5px); /* Aplicando um filtro de desfoque para navegadores WebKit */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Adicionando uma borda com transparência */
+
+        border-radius: 50px;  /* Arredondando as bordas */
+        background: #e0e0e0;  /* Definindo a cor de fundo com transparência */
+        box-shadow:  20px 20px 60px #5a5a5a,  /* Adicionando uma sombra */
+                    -20px -20px 60px #ffffff;  /* Adicionando uma sombra */
+
+    opacity: 0.9; /* Definindo a opacidade */
+}
+
+/* Estilo do título principal dentro do contêiner principal */
+.container h1 {
+    text-align: center; /* Centralizando o texto */
+    color: #333; /* Definindo a cor do texto */
+    font-weight: bold; /* Definindo o peso da fonte */
+}
+
+/* Estilo dos campos de entrada */
+.input {
+    margin: 20px; /* Adicionando margem */
+}
+
+/* Estilo das etiquetas dos campos de entrada */
+label {
+    font-size: 1.9rem; /* Definindo o tamanho da fonte */
+    display: block; /* Exibindo como bloco */
+    margin-bottom: 5px; /* Adicionando margem inferior */
+    color: #666; /* Definindo a cor do texto */
+    font-weight: bold; /* Definindo o peso da fonte */
+}
+
+/* Estilo dos campos de entrada de texto e número */
+select,
+input[type="number"] {
+    width: 100%; /* Definindo a largura total */
+    padding: 10px; /* Adicionando preenchimento interno */
+    border: 1px solid #ccc; /* Adicionando uma borda */
+    border-radius: 5px; /* Arredondando as bordas */
+    font-size: 1.5rem; /* Definindo o tamanho da fonte */
+}
+
+/* Estilo do contêiner dos botões */
+.container-button {
+    margin-top: 3.9rem; /* Adicionando margem superior */
+    display: flex; /* Usando flexbox para organizar os botões */
+    width: 100%; /* Definindo a largura total */
+    justify-content: space-around; /* Distribuindo os botões uniformemente */
+}
+
+/* Estilo do botão principal */
+#convertBtn {
+    width: 100%; /* Definindo a largura total */
+    padding: 10px; /* Adicionando preenchimento interno */
+    margin-right: 10px; /* Adicionando margem direita */
+    margin-left: 10px; /* Adicionando margem esquerda */
+    background-color: #4caf50; /* Definindo a cor de fundo */
+    font-size: 1.7rem; /* Definindo o tamanho da fonte */
+    color: #fff; /* Definindo a cor do texto */
+    border: none; /* Removendo a borda */
+    border-radius: 5px; /* Arredondando as bordas */
+    cursor: pointer; /* Mudando o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Adicionando uma transição suave */
+}
+
+/* Estilo do botão ao passar o mouse */
+#convertBtn:hover {
+    background-color: #45a049; /* Mudando a cor de fundo ao passar o mouse */
+    font-weight: bold; /* Tornando o texto em negrito ao passar o mouse */
+}
+
+/* Estilo do botão de limpar */
+#limparDados {
+    width: 100%; /* Definindo a largura total */
+    padding: 10px; /* Adicionando preenchimento interno */
+    margin-right: 10px; /* Adicionando margem direita */
+    margin-left: 10px; /* Adicionando margem esquerda */
+    background-color: #737373; /* Definindo a cor de fundo */
+    font-size: 1.7rem; /* Definindo o tamanho da fonte */
+    color: #fff; /* Definindo a cor do texto */
+    border: none; /* Removendo a borda */
+    border-radius: 5px; /* Arredondando as bordas */
+    cursor: pointer; /* Mudando o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease; /* Adicionando uma transição suave */
+}
+
+/* Estilo do botão de limpar ao passar o mouse */
+#limparDados:hover {
+    background-color: #595959; /* Mudando a cor de fundo ao passar o mouse */
+    font-weight: bold; /* Tornando o texto em negrito ao passar o mouse */
+}
+
+/* Estilo do resultado */
+#result {
+    margin-top: 3.9rem; /* Adicionando margem superior */
+    margin-left: 15px; /* Adicionando margem esquerda */
+    padding: 10px; /* Adicionando preenchimento interno */
+    font-size: 1.7rem; /* Definindo o tamanho da fonte */
+    background-color: #dff0d8; /* Definindo a cor de fundo */
+    border: 1px solid #d6e9c6; /* Adicionando uma borda */
+    border-radius: 5px; /* Arredondando as bordas */
+    color: #3c763d; /* Definindo a cor do texto */
+    display: flex; /* Utilizando flexbox para alinhar os itens centralmente */
+    align-items: center; /* Alinhando os itens verticalmente */
+    justify-content: center; /* Alinhando os itens horizontalmente */
+    flex-shrink: 0; /* Evitando que o elemento diminua de tamanho */
+}
+
+/* Estilo do texto "AGUARDANDO DADOS" antes de preencher os campos */
+#result::before {
+    content: attr(data-content); /* Adicionando o conteúdo definido no atributo de dados */
+    display: block; /* Exibindo como bloco */
+    padding: 10px; /* Adicionando preenchimento interno */
+    color: #3c763d; /* Definindo a cor do texto */
+    font-weight: bold; /* Definindo o peso da fonte */
+    border-radius: 5px; /* Arredondando as bordas */
+    animation: pulse 1s infinite alternate; /* Adicionando uma animação de pulsação */
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0; /* Configurando a opacidade inicial */
+    }
+    to {
+        opacity: 1; /* Configurando a opacidade final */
+    }
+}
+
+/* Estilização das imagens das tecnologias aplicadas */
+/* Linha que divide a mensagem das tecnologias */
+.divider {
+    width: 100%; /* Definindo a largura total */
+    border-top: .5px solid #4caf50; /* Adicionando uma borda superior */
+    margin-top: 3.9rem; /* Adicionando margem superior */
+}
+
+/* Contêiner pai das imagens de tecnologia */
+.icons-container {
+    margin-top: 3.9rem; /* Adicionando margem superior */
+    display: flex; /* Usando flexbox para organizar as imagens */
+    width: 100%; /* Definindo a largura total */
+    justify-content: space-around; /* Distribuindo as imagens uniformemente */
+}
+
+/* Item filho das imagens de tecnologia */
+.icon-item {
+    width: 80px; /* Definindo a largura das imagens */
+    height: auto; /* Mantendo a proporção */
+}
+
+/* Estilização do rodapé */
+
+footer{
+    display: flex; /* Utilizando flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organizando os itens em coluna */
+    align-items: center; /* Centralizando os itens horizontalmente */
+    margin-top: 2.9rem; /* Adicionando margem superior para separar do conteúdo anterior */
+}
+
+.footer{
+    color: #fff;    
+    font-weight: 1000; /* Definindo o peso da fonte como 1000 (muito bold) */
+    font-size: 2.0rem; /* Definindo o tamanho da fonte */
+    text-shadow: 4px 4px 8px #000; /* Adicionando sombra ao contorno das letras */
+}
+
+
+@media(max-width: 1280px){
+    .container {
+        width: 70%; /* Reduzindo a largura dos contêineres para telas menores */
+        min-width: auto; /* Removendo a largura mínima */
+    }
+}
+
+@media(max-width: 768px){
+    .container {
+        width: 90%; /* Reduzindo ainda mais a largura dos contêineres para telas muito menores */
+    }
+}
+
+@media(max-width: 480px){
+    .container {
+        width: 92%; /* Utilizando a largura total para telas muito pequenas */
+       
+    }
+}
+
+@media(max-width: 300px){
+    .container {
+        width: 95%; /* Utilizando a largura total para telas extremamente pequenas */
+    
+    }
+
+}
+
+@media(max-width: 200px){
+    .container {
+        width: 98%; /* Utilizando a largura total para telas extremamente pequenas */
+       
+    }
+
+
+}
+
+/* Ajustes para o rodapé */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Organizando os itens em coluna */
+        align-items: center; /* Centralizando os itens horizontalmente */
+        text-align: center; /* Centralizando o texto */
+    }
+
+    .footer {
+        font-size: 1.6rem; /* Reduzindo o tamanho da fonte */
+    }
+}
+
